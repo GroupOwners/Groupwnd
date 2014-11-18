@@ -7,8 +7,12 @@
   <%= @offer.description %>
 </div>
 <div>
-  <%="Sale Price #{@offer.sale_price_currency} #{@offer.sale_price_cents}" %>
+  <p>
+    Sale Price: <%= humanized_money_with_symbol @offer.sale_price %>
+  </p>
 </div>
 <div>
-  <%="Actual Price #{@offer.actual_price_currency} #{@offer.actual_price_cents}" %>
+  <p>
+    Actual Price: <%= humanized_money_with_symbol @offer.actual_price %>
+  </p>
 </div>
