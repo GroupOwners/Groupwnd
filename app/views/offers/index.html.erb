@@ -1,9 +1,15 @@
 <h1 class="page_title">Your Coupons For Today</h1>
 
-<ul class="nine_offers">
+<section class="nine_offers">
   <% @offers.each do |offer| %>
-    <li class="one_offer">
-      <%= link_to image_tag(offer.image, width: "300"), offer_path(offer) %>
-    </li>
+    <div>
+      <%= offer.name %>
+    </div>
+    <div>
+      <%= link_to image_tag(offer.image, width: "500"), offer_path(offer) %>
+    </div>
+    <div>
+      <%= offer.sale_price %>
+    </div>
   <% end %>
-</ul>
+</section>
