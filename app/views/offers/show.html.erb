@@ -1,6 +1,14 @@
 <h1 class="page_title"><%= @offer.name %>
 
-<%= image_tag(@offer.image) %>
-<%= @offer.description %>
-<%= @offer.sale_price %>
-<%= @offer.actual_price %>
+<div>
+  <%= image_tag(@offer.image, width:"300") %>
+</div>
+<div>
+  <%= @offer.description %>
+</div>
+<div>
+  <%= @offer.sale_price %>
+</div>
+<div>
+  <%= @offer.actual_price %>
+</div>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
 
   constraints Monban::Constraints::SignedIn.new do
-    root "offers#index", as: :dashboard
+    root "users#show", as: :dashboard
   end
 
   constraints Monban::Constraints::SignedOut.new do
