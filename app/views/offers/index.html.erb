@@ -9,7 +9,7 @@
       <%= link_to image_tag(offer.image, width: "500"), offer_path(offer) %>
     </div>
     <div>
-      <%= offer.sale_price %>
+      <%= "#{offer.sale_price_currency} #{offer.sale_price_cents}" %>
     </div>
   <% end %>
 </section>
