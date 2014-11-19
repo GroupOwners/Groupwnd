@@ -59,8 +59,6 @@ GEM
       bcrypt
       rails
       warden
-    monban-generators (0.0.4)
-      monban (>= 0.0.12)
     monetize (1.0.0)
       money (~> 6.4.0)
     money (6.4.0)
@@ -135,7 +133,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   monban
-  monban-generators
   money-rails
   neat
   normalize-rails

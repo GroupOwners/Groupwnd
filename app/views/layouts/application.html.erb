@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Groupwnd</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<% if signed_in? %>
-  <%= link_to "Sign out", session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign in", new_session_path %>
-  <%= link_to "Sign up", new_user_path %>
-<% end %>
+  <head>
+    <title>Groupwnd</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <% if signed_in? %>
+      <%= link_to "Sign out", session_path, method: :delete %>
+      <%= link_to "My Account", user_path(current_user) %>
+    <% else %>
+      <%= link_to "Sign in", new_session_path %>
+      <%= link_to "Sign up", new_user_path %>
+    <% end %>
 
-
-<%= yield %>
-
-</body>
+    <%= link_to "Offers", offers_path %> 
+    <%= yield %>
+  </body>
 </html>

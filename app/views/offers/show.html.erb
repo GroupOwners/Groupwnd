@@ -16,3 +16,6 @@
     Actual Price: <%= humanized_money_with_symbol @offer.actual_price %>
   </p>
 </div>
+<div>
+  <%= button_to "Buy Me", offer_purchase_path(@offer) %>
+</div>
