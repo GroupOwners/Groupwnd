@@ -1,6 +1,7 @@
 class OffersController < ApplicationController
+  SAMPLE_CONSTANT = 9
   def index
-    @offers = Offer.all
+    @offers = Offer.all.sample(SAMPLE_CONSTANT)
   end
 
   def show
