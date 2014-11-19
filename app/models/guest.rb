@@ -1,10 +1,9 @@
 class Guest
-  attr_reader :signed_in, :email
   def email
-    "Guest@groupwnd.com"
+    "Not a user"
   end
 
-  def signed_in
+  def signed_in?
     false
   end
 end
