@@ -5,15 +5,16 @@ Rails.application.routes.draw do
   
 
   constraints Monban::Constraints::SignedIn.new do
-    root "users#show", as: :dashboard
   end
 
   constraints Monban::Constraints::SignedOut.new do
-    root "sessions#new"
   end
 
+  root "offers#index"
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create]
-  resources :offers, only: [:show, :index]
+  resources :users, only: [:new, :create, :show]
+  resources :offers, only: [:show, :index] do
+    resource :purchase, only: [:create]
+  end
 
 end
