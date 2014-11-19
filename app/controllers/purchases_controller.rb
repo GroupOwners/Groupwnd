@@ -4,7 +4,7 @@ class PurchasesController < ApplicationController
   def create
     redirect_to offers_path
   end
-  
+
   private
 
   def check_sign_in

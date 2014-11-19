@@ -3,6 +3,7 @@ class Guest
   def email
     "Guest@groupwnd.com"
   end
+
   def signed_in
     false
   end
