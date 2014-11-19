@@ -2,16 +2,12 @@
 
 <section class="nine_offers">
   <% @offers.each do |offer| %>
+    <h2 class="coupon_name"><%= offer.name %></h2>
     <div>
-      <%= offer.name %>
-    </div>
-    <div>
-      <%= link_to image_tag(offer.image, width: "500"), offer_path(offer) %>
-      <p>
+      <%= link_to image_tag(offer.image), offer_path(offer) %>
+      <span class="sale_price">
         Sale Price: <%= humanized_money_with_symbol offer.sale_price %>
-      </p>
-    </div>
-    <div>
+      </span>
     </div>
   <% end %>
 </section>
