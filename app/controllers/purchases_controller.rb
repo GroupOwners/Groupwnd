@@ -8,8 +8,7 @@ class PurchasesController < ApplicationController
   private
 
   def check_sign_in
-    if signed_in?
-    else
+    unless signed_in?
       redirect_to new_session_path
     end
   end
