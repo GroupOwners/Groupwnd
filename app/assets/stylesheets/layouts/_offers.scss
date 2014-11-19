@@ -1,0 +1,27 @@
+.offers {
+  @include clearfix;
+}
+
+.offer {
+  float: left;
+
+  .offer-image {
+
+  }
+
+  .offer-details {
+
+  }
+
+  .offer-name {
+    font-size: 1.2em;
+  }
+
+  .offer-price {
+    color: green;
+  }
+
+  @include media($medium-screen-up) {
+    max-width: 50%;
+  }
+}
