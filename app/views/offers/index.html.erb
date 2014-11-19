@@ -1,13 +1,21 @@
-<h1 class="page_title">Your Coupons For Today</h1>
+<header class="page-title">
+  <h1>Today’s Offers</h1>
+</header>
 
-<section class="nine_offers">
-  <% @offers.each do |offer| %>
-    <h2 class="coupon_name"><%= offer.name %></h2>
-    <div>
-      <%= link_to image_tag(offer.image), offer_path(offer) %>
-      <span class="sale_price">
-        Sale Price: <%= humanized_money_with_symbol offer.sale_price %>
-      </span>
-    </div>
-  <% end %>
+<section class="offers">
+  <ol>
+    <% @offers.each do |offer| %>
+      <li class="offer">
+        <div class="offer-image">
+          <%= link_to image_tag(offer.image), offer_path(offer) %>
+        </div>
+        <div class="offer-details">
+          <h1 class="offer-name"><%= offer.name %></h1>
+          <span class="offer-price">
+            Sale Price: <%= humanized_money_with_symbol offer.sale_price %>
+          </span>
+        </div>
+      </li>
+    <% end %>
+  </ol>
 </section>

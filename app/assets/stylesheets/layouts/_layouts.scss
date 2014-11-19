@@ -1,0 +1,5 @@
+.container {
+  @include outer-container;
+  padding-left: $base-spacing / 2;
+  padding-right: $base-spacing / 2;
+}

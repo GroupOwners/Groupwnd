@@ -1,4 +1,9 @@
-@import "normalize-rails";
+@import "normalize";
+
 @import "bourbon";
-@import "base/base";
+@import "base/grid-settings";
 @import "neat";
+@import "base/base";
+
+@import "components/components";
+@import "layouts/layouts";

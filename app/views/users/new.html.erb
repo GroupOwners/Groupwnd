@@ -9,15 +9,15 @@
     </ul>
   <% end %>
 
-  <div>
+  <fieldset class="email">
     <%= form.label :email %>
     <%= form.email_field :email %>
-  </div>
-  <div>
+  </fieldset>
+  <fieldset class="password">
     <%= form.label :password %>
     <%= form.password_field :password %>
-  </div>
-  <div>
+  </fieldset>
+  <fieldset class="sign-up">
     <%= form.submit "Sign up" %>
-  </div>
+  </fieldset>
 <% end %>
