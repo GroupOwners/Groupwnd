@@ -2,7 +2,10 @@ class PurchasesController < ApplicationController
   before_action :check_sign_in
 
   def create
-    redirect_to offers_path
+    offer = Offer.find(params[:id])
+    current_user.purchases(offer)
+
+    redirect_to user_path
   end
 
   private
