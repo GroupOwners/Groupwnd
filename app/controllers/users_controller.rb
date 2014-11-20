@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    
+  end
+
   def create
     @user = sign_up(user_params)
 

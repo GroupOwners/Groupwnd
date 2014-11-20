@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
   has_many :offers
 
   def purchase_offer(offer)
-    
+    offers.append(offer)
   end
 end

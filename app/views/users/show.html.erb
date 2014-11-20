@@ -6,4 +6,17 @@
 
 <section class="purchase-history">
   <h1>Purchase History</h1>
+  <% current_user.offers.each do |offer| %>
+    <h3 class="coupon_name"><%= offer.name %></h3>
+    <%= image_tag(offer.image) %>
+    <span class="description">
+      <%= offer.description %>
+    </span>
+    <span class="sale_price">
+      Sale Price: <%= humanized_money_with_symbol offer.sale_price %>
+    </span>
+    <span class="actual_price">
+      Actual Price: <%= humanized_money_with_symbol offer.actual_price %>
+    </span>
+  <% end %>
 </section>
