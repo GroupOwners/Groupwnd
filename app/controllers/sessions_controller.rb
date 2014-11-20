@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
+  before_action :keep_link_back_url, only: [:new]
 
   def new
     @user = User.new
@@ -9,7 +10,7 @@ class SessionsController < ApplicationController
     user = authenticate_session(session_params)
 
     if sign_in(user)
-      redirect_to root_path
+      redirect_to session[:link_back]
     else
       render :new
     end
@@ -24,6 +25,10 @@ class SessionsController < ApplicationController
 
   def session_params
     params.require(:session).permit(:email, :password)
+  end
+
+  def keep_link_back_url
+    session[:link_back] = request.referer
   end
 end
 
