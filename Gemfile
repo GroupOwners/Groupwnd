@@ -1,14 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'bourbon', '~> 3.2.3'
+gem 'bourbon', :git => 'https://github.com/thoughtbot/bourbon.git'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'monban'
 gem 'money-rails'
-gem 'neat', '~> 1.5.1'
+gem 'neat', '~> 1.7.0'
 gem 'pg'
 gem 'rails', '4.1.6'
-gem 'sass-rails', '~> 4.0.4'
+gem 'sass', '~> 3.3'
+gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'uglifier', '>= 1.3.0'

@@ -15,18 +15,31 @@
     <div class="container">
       <h1 class="app-title">
         <%= link_to root_path do %>
-          <%= image_tag("image.svg") %>
+          App
         <% end %>
       </h1>
+      <input class="location-search" type="search" placeholder="New York, NY">
       <nav class="app-nav">
-        <%= link_to "Offers", offers_path %>
-        <% if signed_in? %>
-          <%= link_to "My Account", user_path(current_user) %>
-          <%= link_to "Sign out", session_path, method: :delete %>
-        <% else %>
-          <%= link_to "Sign in", new_session_path %>
-          <%= link_to "Sign up", new_user_path %>
-        <% end %>
+        <ol>
+          <li>
+            <%= link_to "Offers", offers_path %>
+          </li>
+          <% if signed_in? %>
+            <li>
+              <%= link_to "My Account", user_path(current_user) %>
+            </li>
+            <li>
+              <%= link_to "Sign out", session_path, method: :delete %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "Sign in", new_session_path %>
+            </li>
+            <li>
+              <%= link_to "Sign up", new_user_path %>
+            </li>
+          <% end %>
+        </ol>
       </nav>
     </div>
   </header>
