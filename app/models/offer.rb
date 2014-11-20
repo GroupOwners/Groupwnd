@@ -5,4 +5,8 @@ class Offer < ActiveRecord::Base
   def self.available
     where(user_id: nil)
   end
+
+  def self.search_results(params)
+    available.where("name ILIKE ?", "%#{params[:search]}%")
+  end
 end

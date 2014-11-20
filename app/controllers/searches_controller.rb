@@ -1,6 +1,5 @@
 class SearchesController < ApplicationController
-
   def show
-    @offers = Offer.available.where("name ILIKE ?", "%#{params[:search]}%")
+    @offers = Offer.search_results(params)
   end
 end
