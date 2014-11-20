@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   root "offers#index"
   resource :session, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show, :edit, :update]
   resources :offers, only: [:show, :index] do
     resource :purchase, only: [:create]
   end
