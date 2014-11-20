@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   resources :offers, only: [:show, :index] do
     resource :purchase, only: [:create]
   end
+  resource :search, only: [:show]
 
 end
