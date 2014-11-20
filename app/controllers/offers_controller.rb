@@ -1,5 +1,4 @@
 class OffersController < ApplicationController
-  SAMPLE_CONSTANT = 9
   def index
     @offers = Offer.available
   end

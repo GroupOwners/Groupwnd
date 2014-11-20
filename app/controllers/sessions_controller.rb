@@ -26,5 +26,9 @@ class SessionsController < ApplicationController
   def session_params
     params.require(:session).permit(:email, :password)
   end
+
+  def keep_link_back_url
+    session[:link_back] = request.referer
+  end
 end
 

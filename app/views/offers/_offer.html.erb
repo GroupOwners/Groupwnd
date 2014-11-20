@@ -1,0 +1,15 @@
+<h1 class="coupon_name"><%= offer.name %></h1>
+
+<%= link_to image_tag(offer.image), offer_path(offer) %>
+
+<span class="description">
+  <%= offer.description %>
+</span>
+
+<span class="sale_price">
+  Sale Price: <%= humanized_money_with_symbol offer.sale_price %>
+</span>
+
+<span class="actual_price">
+  Actual Price: <%= humanized_money_with_symbol offer.actual_price %>
+</span>
