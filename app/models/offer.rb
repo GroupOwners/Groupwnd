@@ -7,6 +7,7 @@ class Offer < ActiveRecord::Base
   end
 
   def self.search_results(params)
-    available.where("name ILIKE ?", "%#{params[:search]}%")
+    query = "%#{params[:search]}%"
+    available.where("name ILIKE ? or description ILIKE ?", query, query)
   end
 end
