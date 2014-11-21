@@ -4,5 +4,9 @@
 
 <section>
   <%= render @offer %>
-  <%= button_to "Purchase", offer_purchase_path(@offer) %>
+  <% if @offer.total_ammount == 0 %>
+    <p> SORRY, NO MORE!!! </p>
+  <% else %>
+    <%= button_to "Purchase", offer_purchase_path(@offer) %>
+  <% end %>
 </section>
