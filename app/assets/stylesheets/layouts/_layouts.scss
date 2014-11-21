@@ -1,7 +1,15 @@
 @import "offers";
 
+body {
+  padding-bottom: ($base-spacing * 4);
+}
+
 .container {
   @include outer-container;
   padding-left: $base-spacing / 2;
   padding-right: $base-spacing / 2;
+}
+
+.page-title {
+  padding: ($base-spacing * 2) 0;
 }

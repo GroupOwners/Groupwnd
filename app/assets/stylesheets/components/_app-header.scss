@@ -23,10 +23,14 @@
   font-size: 1em;
 }
 
-input[type="search"].location-search {
+.location-search {
   @include align-self(center);
   @include flex(1);
   margin: 0 ($base-spacing * 1.5);
+
+  input[type="search"] {
+    margin: 0;
+  }
 }
 
 .app-nav li {

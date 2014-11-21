@@ -6,15 +6,17 @@
   <ol class="offers">
     <% @offers.each do |offer| %>
       <li class="offer">
-        <div class="offer-image">
-          <%= link_to image_tag(offer.image), offer_path(offer) %>
-        </div>
-        <div class="offer-details">
-          <h1 class="offer-name"><%= offer.name %></h1>
-          <span class="offer-price">
-            Sale Price: <%= humanized_money_with_symbol offer.sale_price %>
-          </span>
-        </div>
+        <%= link_to offer_path(offer) do %>
+          <div class="offer-image">
+            <%= image_tag(offer.image) %>
+          </div>
+          <div class="offer-details">
+            <h1 class="offer-name"><%= offer.name %></h1>
+            <span class="offer-price">
+              Sale Price: <%= humanized_money_with_symbol offer.sale_price %>
+            </span>
+          </div>
+        <% end %>
       </li>
     <% end %>
   </ol>
