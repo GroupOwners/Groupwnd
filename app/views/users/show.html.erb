@@ -1,8 +1,10 @@
 <header class="page-title">
   <h1>Dashboard</h1>
+
 </header>
 
 <%= current_user.email %>
+<%= link_to "Settings", edit_user_path(current_user) %>
 
 <section class="purchase-history">
   <h1>Purchase History</h1>
